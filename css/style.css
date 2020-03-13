@@ -1,0 +1,256 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+body{
+    background-image: url(https://d11wkw82a69pyn.cloudfront.net/siteassets/images/efinance/efinance1440x600_canvas_low.jpg);
+    
+}
+.cabecalho{
+
+	width: 100%;
+	height: 80px;
+	    background-image: linear-gradient(45deg, #2196F3, #673AB7);
+}
+.logo{
+
+	font-size: 20px;
+	color: black;
+	margin-left: 40px;
+	margin-top: 15px;
+	position: absolute;
+}
+.menu{
+	
+	list-style-type: none;
+	margin-left: 43%;
+    margin-top: 35px;
+    position: absolute;
+
+
+}
+.dados {
+    background: white;
+    padding: 10px;
+}
+.menu li, .dados li{
+	display:inline-block;
+	margin-left: 30px;
+	text-transform: uppercase;
+	padding: 3px;
+	transition: .3s;
+	
+	
+
+}
+.menu li a{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.menu li:hover{
+	border-bottom:3px solid black;
+	
+}
+#check{
+	display: none;
+}
+.btn{
+	display: none;
+}
+
+
+hr {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+form{
+    padding: 10px;
+    border-radius: 5px;
+    border:1px solid #298bec;
+    margin-top: 20px;
+    position: absolute;
+    width: 27%;
+    margin-left: -92px;
+    background: #3182e6de;
+    
+}
+
+.formM1, .formM2 {
+    position: absolute;
+    margin: auto;
+    left: 43%;
+    width: 434px;
+    height: 188px;
+    background: #58a2e8db;
+    display: none;
+    z-index: 2;
+}
+span.fechar {
+    right: 20px;
+    position: absolute;
+    color: black;
+    background: white;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+input#deposito, input#saque {
+    font-size: 86px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.botao{
+    padding: 5px;
+    padding: 5px;
+    background: #278ded;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+.botao:hover{
+    background:#2799;
+
+}
+.botaoacao{
+    padding: 5px;
+    background: #278ded;
+    border: 2px solid #374588;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+    width: 247px;
+    height: 162px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.botaoacao:hover{
+    background:#2799;
+
+}
+span{
+    color: white;
+    font-weight: bold;
+}
+input.botao {
+    
+    font-size: 22px;
+    background: #85e683;
+}
+input[type="text"], input[type="password"],input[type="email"], input[type="number"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #298bec;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.formli{
+    display: inline-block;
+    margin-left: 30%;
+    
+}
+
+
+@media(max-width: 944px){
+
+	.logo{
+		font-size: 15px;
+            margin-top: 22px;
+            margin-left: 182px;
+	}
+	.menu li a{
+		font-size: 15px;
+
+    }
+    form{
+        margin-left: -14px;
+    }
+}
+
+@media(max-width:770px){
+
+	.btn{
+	display: block;
+    font-size: 25px;
+    color: white;
+    float: right;
+    margin-top: 24px;
+    margin-right: 30px;
+    }
+
+    .formli{
+        margin-left: 40% !important;
+    }
+
+    form{
+
+        width: 37% !important;
+        margin-left: -170px !important;
+    
+    }
+
+	.menu{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background:#36373e;
+		margin-left: -100%;
+    	margin-top: 80px;
+        transition: .3s;
+        z-index: 9;
+    	
+	}
+	.menu li{
+
+		text-align: center;
+		margin-bottom: 80px;
+		display: block;
+		margin-top: 20px;
+
+	}
+
+	#check:checked ~ .menu{
+		margin-left: 0;
+
+    }
+    
+}
+@media(max-width:362px){
+
+    form{
+
+        width: 87% !important;
+        margin-left: -132px !important;
+
+    }
+    .formli{
+        display: block;
+        margin-bottom: 438px;
+    
+    }
+    .logo{
+        margin-left: 20px;
+    }
+
+    .botaoacao{
+        margin-left: 56px;
+    }
+    .formM1, .formM2{
+        top: 153px;
+        left: 41%;
+    }
+    input.botao {
+        margin-left: 105px;
+    }
+}
+
+
