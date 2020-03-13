@@ -10,7 +10,6 @@
         private $saldo;
 
 
-
         function getIdConta(){
             return $this->idConta;
         }
@@ -106,6 +105,8 @@
 
             
         }
+
+        //Função Saque---------------------------------------------------------
         function saque(){
             if(empty($_POST['saque']) == true){
 
@@ -147,7 +148,10 @@
             }
         }
 
+//--------------------------------------Fim Saque-----------------------------------
 
+
+//Criar nova Conta-------------------------------------------------------------------
             
        function novaConta(){
 
@@ -165,6 +169,24 @@
             $conta->setCpf($_POST['cpf']);
             $conta->setEmail($_POST['email']);
             $conta->setSenha(md5($_POST['senha']));
+
+            $validarCadastro="SELECT * FROM conta WHERE cpf='".$conta->getCpf()."'";
+            $validarCadastro=$conn->query($validarCadastro)->fetchAll();
+
+            $resultados= count($validarCadastro);
+
+            echo $resultados;
+
+            if($resultados >0){
+                echo "Você possui um cadastro em nosso sistema, faça login";
+            }else{
+
+
+
+
+            
+
+
            
 
            try {
@@ -184,13 +206,15 @@
            } catch (PDOException $e) {
                echo "Erro: ".$e->getMessage();
            }
+        }
             
         }
+    
  
     }
 
 
-    
+    //Fazer Login---------------------------------------------------------------------
     function fazerLogin(){
 
         if(empty($_POST['cpf']) == true){

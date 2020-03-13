@@ -49,11 +49,11 @@ if(empty($_SESSION['nome']) == true){
 </div>
 <div class="dados">
 <?php
-    echo "<li>Seja bem vindo ".$_SESSION['nome']."</li>";
+    echo "<li>Seja bem vindo <b>".$_SESSION['nome']."</b></li>";
    
 ?>
 
-<?php  echo "<li>Saldo em conta: <b>R$ ".$saldo."</b></li>";}?>
+<?php  echo "<li>Saldo em conta: <b>R$ ".number_format($saldo,2, ',','.')."</b></li>";}?>
 
 </div>
 <button class="botaoacao" id="depositar" onclick="ativaDeposito()">Depositar</button>
