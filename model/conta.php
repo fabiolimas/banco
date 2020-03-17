@@ -65,7 +65,7 @@
 
             }else{
 
-                include("../control/conexao.php");
+                include("control/conexao.php");
 
                 $conta = new Conta();
                $conta->setCpf($_POST['cpf']);
@@ -92,7 +92,7 @@
 
                     $updateSaldo="UPDATE conta SET saldo=$depositado WHERE cpf='".$conta->getCpf()."'";
                     $updateSaldo=$conn->query($updateSaldo);
-                    header("Location:../view/gerenciar.php");
+                    header("Location:gerenciar.php");
 
                    
 
@@ -112,7 +112,7 @@
 
             }else{
 
-                include("../control/conexao.php");
+                include("control/conexao.php");
 
                 $conta = new Conta();
                $conta->setCpf($_POST['cpf']);
@@ -138,7 +138,7 @@
 
                     $updateSaldo="update conta set saldo=$valorSacado where cpf='".$conta->getCpf()."'";
                     $updateSaldo=$conn->query($updateSaldo);
-                    header("Location:../view/gerenciar.php");
+                    header("Location:gerenciar.php");
 
            
                 }else{
@@ -160,7 +160,7 @@
 
             }else{
 
-            include("../control/conexao.php");
+            include("control/conexao.php");
 
             $conta = new Conta();
 
@@ -222,7 +222,7 @@
         }else{
             session_start();
 
-            include("../control/conexao.php");
+            include("control/conexao.php");
 
             $conta = new Conta();
 
@@ -245,11 +245,11 @@
                     $_SESSION['saldo']=$conta->getSaldo();
                     $_SESSION['cpf']=$conta->getCpf();
 
-                    header("Location:../view/gerenciar.php");
+                    header("Location:gerenciar.php");
                 }
                 
             }else{
-                header("Location:../view/novaConta.php");
+                header("Location:novaConta.php");
             }
 
 

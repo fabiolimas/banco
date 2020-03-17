@@ -6,8 +6,8 @@ if(empty($_SESSION['nome']) == true){
     exit();
 }else{
 
-    include("../model/conta.php");
-    include("../control/conexao.php");
+    include("model/conta.php");
+    include("control/conexao.php");
     $novo =new Conta();
     $findUsuario="SELECT * FROM conta WHERE cpf='".$_SESSION['cpf']."'";
     $findUsuario=$conn->query($findUsuario);
@@ -25,8 +25,8 @@ if(empty($_SESSION['nome']) == true){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../font/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font/css/all.css">
     <title>Gerenciar</title>
 </head>
 <body>

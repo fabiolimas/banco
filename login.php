@@ -1,6 +1,6 @@
 <?php
 session_start();
-    include("../model/conta.php");
+    include("model/conta.php");
     $login= new Conta();
 
 ?>
@@ -9,8 +9,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../font/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font/css/all.css">
     <title>Login</title>
 </head>
 <body>
